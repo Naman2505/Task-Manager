@@ -1,0 +1,140 @@
+/*
+Light Mode:
+
+Background: #F6F8FA
+Text: #334E68
+Primary Button: #3498DB
+Secondary Button: #ECF0F1
+Accent/Highlight: #FFC300
+Task Completed: #2ECC71
+Hover Effect: Slightly darken or lighten the background/text color for buttons and tasks.
+
+Dark Mode:
+
+Background: #1E272E
+Text: #ECF0F1
+Primary Button: #3498DB
+Secondary Button: #2C3E50
+Accent/Highlight: #FFC300
+Task Completed: #2ECC71
+Hover Effect: Slightly lighten or darken the background/text color for buttons and tasks.
+Considerations:
+Use high contrast for text on buttons and tasks to ensure readability.
+Ensure that the hover effects provide visual feedback without being too distracting.
+Use a subtle transition or animation for hover effects to make the interface more engaging.
+*/
+:root{
+    --dark-back: #23212c;
+    --dark-text: #e8ebec;
+    --dark-primary: #3498DB;
+    --dark-secondary: #2C3E50; 
+    --dark-highlight:#ffc300;
+    --dark-completion:#2ecc71;
+    --dark-font-1:48px;
+    --dark-font-2:24px;
+    --dark-font-3:16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    background-color: var(--dark-back);
+    color: var(--dark-text);
+}
+.wrapper {
+    padding: 48px;
+    min-height: 85vh;
+    border: 1px solid white;
+    box-shadow: 2px 0 4px white,inset 2px 2px 8px white;
+    border-radius: 10px;
+    margin: 0 20%;
+}
+.header{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+}
+.header h1{
+    font-size: var(--dark-font-1);
+}
+.header p {
+    font-size: var(--dark-font-3);
+}
+
+.creation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.task-creation {
+    width: 100%;
+    height: 48px;
+    font-size: var(--dark-font-2);
+    color: #2C3E50;
+    border-radius: 10px;
+    border:none;
+    padding: 0px 10px;
+}
+.creation button {
+    height: 48px;
+    width: 60px;
+    color: var(--dark-primary);
+    border-radius:0 10px 10px 0;
+    padding: 3px 10px;
+    line-height: 48px;
+    min-width: fit-content;
+    border: none;
+    font-size: large;
+}
+.creation button:is(:focus,:focus-visible) {
+    border: none;
+}
+.task {
+    background-color: white;
+    color: var(--dark-text);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: center;
+    padding: 0 0 0 20px;
+}
+.task-check {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+.task p {
+    font-size: var(--dark-font-2);
+    width: 100%;
+    padding: 5px 20px;
+    color:rgb(117,117,117);
+}
+.task-deletion{
+    border:none;
+    font-size: large;
+    color: var(--dark-primary);
+    width: fit-content;
+    width: 80px;
+    padding: 0 10px;
+    height: 100%;
+    line-height: 36px;
+    border-radius: 0 10px 10px 0;
+}
+
+.progress{
+    display: flex;
+    font-size: 1.2rem;
+    color: var(--dark-primary);
+    padding: 30px 30px 20px;
+    justify-content: center;
+}

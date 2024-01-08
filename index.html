@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Task Manager</h1>
+            <p>manage your tasks smoothly.</p>
+        </div>
+        <div class="creation">
+            <input id="taskInput" class="task-creation" type="text" placeholder="Creat new tasks...">
+            <button class="task-button" type="submit">Create</button>
+        </div>
+        <div class="task-list">
+            <h2>Task Lists</h2>
+            <div class="task no-task">
+                <input class="task-check" type="checkbox">
+                <p>No Task</p>
+                <button class="task-deletion">Delete</button>
+            </div>
+        </div>
+        <div class="progress">
+            <p>Task Completion : <span class="progress-percent">0</span>%</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
